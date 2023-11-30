@@ -1,3 +1,4 @@
+import 'package:after_layout/after_layout.dart';
 import 'package:fast_app_base/screen/main/tab/tab_item.dart';
 import 'package:fast_app_base/screen/main/tab/tab_navigator.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +15,13 @@ class MainScreen extends StatefulWidget {
 
 class MainScreenState extends State<MainScreen> with SingleTickerProviderStateMixin {
   TabItem _currentTab = TabItem.home;
-  final tabs = [TabItem.home, TabItem.favorite];
+  final tabs = [
+    TabItem.home,
+    TabItem.benefit,
+    TabItem.ttosspay,
+    TabItem.stock,
+    TabItem.all,
+  ];
   final List<GlobalKey<NavigatorState>> navigatorKeys = [];
 
   int get _currentIndex => tabs.indexOf(_currentTab);
@@ -153,5 +160,11 @@ class MainScreenState extends State<MainScreen> with SingleTickerProviderStateMi
     for (final _ in tabs) {
       navigatorKeys.add(GlobalKey<NavigatorState>());
     }
+  }
+
+  @override
+  FutureOr<void> afterFirstLayout(BuildContext context) {
+    // TODO: implement afterFirstLayout
+    throw UnimplementedError();
   }
 }
