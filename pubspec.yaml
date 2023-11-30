@@ -111,6 +111,11 @@ flutter:
     - assets/image/flag/
     - assets/image/darkmode/
     - assets/translations/
+    - assets/image/bank/
+    - assets/image/stock/
+    - assets/image/credit_card/
+    - assets/image/benefit
+    - assets/image/illustration/
     - assets/
 
   # An image asset can refer to one or more resolution-specific "variants", see
